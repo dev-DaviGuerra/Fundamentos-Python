@@ -1,16 +1,16 @@
 print('-------INÍCIO-------')
+usuario_certo = 'Davi'
+senha_certa = 'senhaSecreta'
 
-estou_com_fome = input('Você está com fome? (Digite "s" para "sim" e "n" para "não"): ') == 's'
-tenho_comida = input('Tem comida em casa? (Digite "s" para "sim" e "n" para "não"): ') == 's'
+usuario = input('Digite o usuário: ') == usuario_certo
+senha = input('Digite a senha: ') == senha_certa
 
-if estou_com_fome and not tenho_comida:
-    print('Ir ao mercado')
-    print('Voltar para casa')
-    print('Preparar uma refeição')
-    print('Comer a comida')
-
-elif estou_com_fome and tenho_comida:
-    print('Preparar uma refeição')
-    print('Comer a comida')
+if usuario and senha:
+    print('Sucesso')
+elif usuario and not senha:
+    print('Senha incorreta, tente novamente')
+elif not usuario and senha:
+    print('Usuário incorreto, tente novamente')
 else:
-    print('\n-------FIM-------')
+    print('Usuário e senha incorretos, tente novamente')
+print('\n-------FIM-------')
