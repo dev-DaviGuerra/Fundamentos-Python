@@ -1,8 +1,12 @@
-idade = int(input("Digite a sua idade: "))
+print('-------INÍCIO-------')
 
-if idade < 18: 
-    print('Você tem menos de 18 anos.\nEntão você é menor de idade')
-elif idade == 18:
-    print('Você tem exatamente 18 anos.\nEntão você é maior de idade')
-else:
-    print('Você tem mais de 18 anos.\nEntão você é maior de idade')
+fome = input('Você está com fome? (Digite "s" para "sim" e "n" para "não"): ')
+
+if fome == 's':
+    comida_em_casa = input('Você tem comida em casa? (Digite "s" para "sim" e "n" para "não"): ')
+    if comida_em_casa != 's':
+        print('Ir ao mercado')
+        print('Voltar para casa')
+    print('Preparar uma refeição')
+    print('Comer a comida')
+print('\n-------FIM-------')
