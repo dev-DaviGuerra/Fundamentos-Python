@@ -1,4 +1,4 @@
-numero_certo = 3
+numero_certo = 31
 descobriu = False
 
 if not descobriu: 
