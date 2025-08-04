@@ -1,16 +1,38 @@
-print('-------INÍCIO-------')
-usuario_certo = 'Davi'
-senha_certa = 'senhaSecreta'
+numero_certo = 3
+descobriu = False
 
-usuario = input('Digite o usuário: ') == usuario_certo
-senha = input('Digite a senha: ') == senha_certa
+if not descobriu: 
+    chute = int(input('Digite o número: '))
+    if chute > numero_certo:
+        print('O número que você escolheu é maior que o número sorteado')
+    elif chute < numero_certo:
+        print('O número que você escolheu é menor que o número sorteado')
+    else:
+        print('Descobriu o número')
+        descobriu = True
 
-if usuario and senha:
-    print('Sucesso')
-elif usuario and not senha:
-    print('Senha incorreta, tente novamente')
-elif not usuario and senha:
-    print('Usuário incorreto, tente novamente')
+if not descobriu: 
+    chute = int(input('Digite o número: '))
+    if chute > numero_certo:
+        print('O número que você escolheu é maior que o número sorteado')
+    elif chute < numero_certo:
+        print('O número que você escolheu é menor que o número sorteado')
+    else:
+        print('Descobriu o número')
+        descobriu = True
+
+if not descobriu: 
+    chute = int(input('Digite o número: '))
+    if chute > numero_certo:
+        print('O número que você escolheu é maior que o número sorteado')
+    elif chute < numero_certo:
+        print('O número que você escolheu é menor que o número sorteado')
+    else:
+        print('Descobriu o número')
+        descobriu = True
+
+
+if descobriu:
+    print('Parabéns, você ganhou!')
 else:
-    print('Usuário e senha incorretos, tente novamente')
-print('\n-------FIM-------')
+    print(f'Que pena, você perdeu! O número secreto era {numero_certo}')
