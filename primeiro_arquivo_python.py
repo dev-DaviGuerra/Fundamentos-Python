@@ -1,5 +1,10 @@
 alunos = ['Davi', 'Fulano', 'Ciclano']
-print(alunos[-1])
+print(alunos)
 
-lista_misturada = [1, 'Python', [10, 4]]
-print(lista_misturada[-1][0])
+alunos[0] = 'davi'
+print(alunos)
+
+del alunos[0]
+print(alunos)
+
+valores = (1, 2, 3)
