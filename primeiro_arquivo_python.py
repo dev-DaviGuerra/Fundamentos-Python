@@ -1,9 +1,4 @@
-pessoas = ['Pedro', 'Thiago', 'João', 'Tomé']
-print(pessoas[1:3])
-print(pessoas[1:])
-print(pessoas[:])
+list(range(10))
 
-nome = 'Davi'
-print(nome[1:])
-print(nome[:-1])
-print(nome[::-1])
+numeros_range = list(range(0, 10, 2))
+print(numeros_range)
