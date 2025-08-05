@@ -1,4 +1,18 @@
-list(range(10))
+numero_secreto = 10
+descobriu = False
 
-numeros_range = list(range(0, 10, 2))
-print(numeros_range)
+for tentativas in range(3):
+    if not descobriu:
+        chute = int(input('Digite um número: '))
+        if chute < numero_secreto:
+            print('Chutou baixo!')
+        elif chute > numero_secreto:
+            print('Chutou alto!')
+        else:
+            print('Descobriu!')
+            descobriu = True
+
+if descobriu:
+    print('Parabéns, você ganhou!')
+else:
+    print('Que pena, você errou!')
