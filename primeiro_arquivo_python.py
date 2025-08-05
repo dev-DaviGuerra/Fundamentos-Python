@@ -1,10 +1,33 @@
-alunos = ['Davi', 'Fulano', 'Ciclano']
-print(alunos)
+nome = 'Davi'
+print(nome[0])
 
-alunos[0] = 'davi'
-print(alunos)
+lista = [1, 2, 3]
+list(tuple(lista))
+print(lista)
 
-del alunos[0]
-print(alunos)
+str(lista)
+print(lista)
 
-valores = (1, 2, 3)
+list(nome)
+print(nome)
+
+str()
+
+tuple()
+
+list()
+
+bool(10)
+
+bool(0)
+
+bool('')
+
+bool('asas')
+
+seq = [1, 2, 3]
+
+if seq: 
+    print('Sequência não está vazia')
+else:
+    print('Sequência está vazia')
