@@ -1,9 +1,7 @@
-n = 0
-
-while n <= 10:
-    print(f'O valor de n é: {n}')
-    n += 1
-    if n == 5:
+while True:
+    entrada = input('Digite qualquer coisa ("q" para sair): ')
+    print(f'O valor digitado foi: {entrada}')
+    if entrada == 'q':
         break
-    
-print('O loop acabou')
+
+print('Programa finalizado!')
