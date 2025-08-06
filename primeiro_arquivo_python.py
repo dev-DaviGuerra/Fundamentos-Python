@@ -1,6 +1,7 @@
-n = 0
+for n in range(-5, 6):
+    if n == 0:
+        continue
+    resultado = 1 / n
+    print(f'O resultado é: {resultado}')
 
-while n <= 3:
-    print(f'O valor de n é: {n}')
-    n += 1
 print('O loop acabou')
