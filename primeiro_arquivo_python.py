@@ -1,8 +1,6 @@
-clientes = [
-    ('Yasmim', 'xxx', 'xxx@email.com'),
-    ('Davi', 'yyy', 'yyy@email.com')
-]
+n = 0
 
-for nome, cpf, email in clientes:
-    print(f'Cliente: {nome}\nCPF: {cpf}\nEmail: {email}\n\n')
-print('Acabou o loop')
+while n <= 3:
+    print(f'O valor de n é: {n}')
+    n += 1
+print('O loop acabou')
