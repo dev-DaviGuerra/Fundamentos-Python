@@ -1,18 +1,8 @@
-numero_secreto = 10
-descobriu = False
+clientes = [
+    ('Yasmim', 'xxx', 'xxx@email.com'),
+    ('Davi', 'yyy', 'yyy@email.com')
+]
 
-for tentativas in range(3):
-    if not descobriu:
-        chute = int(input('Digite um número: '))
-        if chute < numero_secreto:
-            print('Chutou baixo!')
-        elif chute > numero_secreto:
-            print('Chutou alto!')
-        else:
-            print('Descobriu!')
-            descobriu = True
-
-if descobriu:
-    print('Parabéns, você ganhou!')
-else:
-    print('Que pena, você errou!')
+for nome, cpf, email in clientes:
+    print(f'Cliente: {nome}\nCPF: {cpf}\nEmail: {email}\n\n')
+print('Acabou o loop')
