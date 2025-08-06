@@ -1,7 +1,9 @@
-for n in range(-5, 6):
-    if n == 0:
-        continue
-    resultado = 1 / n
-    print(f'O resultado é: {resultado}')
+n = 0
 
+while n <= 10:
+    print(f'O valor de n é: {n}')
+    n += 1
+    if n == 5:
+        break
+    
 print('O loop acabou')
