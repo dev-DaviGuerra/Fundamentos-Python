@@ -1,19 +1,9 @@
-capitais = {
-    'Brasil': 'Brasília',
-    'França': 'Paris',
-    'Japão': 'Tóquio',
-    'Espanha': 'Madrid'
-}
-
-print('Brasil' in capitais)
-print('Brasília' in capitais)
-
-print('-' * 100)
-
-pais = 'Argentina'
-
-if pais in capitais:
-    capital = capitais[pais]
-    print(f'A capital para o país {pais} é {capital}')
-else:
-    print(f'Não há capital registrada para o país {pais}')
+while True:
+    opt = input('Escolha uma opção (1, 2) | "q" para sair: ')
+    if opt == 'q':
+        break
+    elif opt not in ('1', '2'):
+        print('Opção inválida! Digite 1 ou 2. ')
+        continue
+    else:
+        print(f'Opção selecionada: {opt}')
