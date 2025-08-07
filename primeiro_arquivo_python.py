@@ -1,26 +1,44 @@
-valores1 = [2, 4, 6, 8]
-valores2 = [1, 2, 3, 4]
+capitais = {
+    'Brasil': 'Brasília',
+    'França': 'Paris',
+    'Japão': 'Tóquio',
+    'Espanha': 'Madrid'
+}
 
-for valor1 in valores1:
-    for valor2 in valores2:
-        if valor1 == valor2:
-            print(f'O seguinte valor aparece nas duas listas:{valor1}')
+print(capitais['Japão'])
 
-print('-' * 50)
+capitais['Inglaterra'] = 'Londres'
+print(capitais)
 
-elemento_em_comum = False
+del capitais['Inglaterra']
+print(capitais)
 
-for valor1 in valores1:
-    if elemento_em_comum == True:
-        break
-    for valor2 in valores2:
-        if valor1 == valor2: 
-            elemento_em_comum = True
-            break
+capitais['Alemanha'] = 'Berlim'
 
-if elemento_em_comum == True:
-    print(f'Tem elemento em comum entre as listas {valores1} e {valores2}')
-else:
-    print(f'Não tem nenhum elemento em comum entre as listas {valores1} e {valores2}')
-            
-        
+for pais in capitais:
+    capital = capitais[pais]
+    print(f'A capital de {pais} é {capital}')
+
+print('-' * 100)
+
+d = dict()
+
+d[10] = 'abc'
+d['CHAVE'] = 5
+d[3.15] = True
+
+for k in d:
+    v = d[k]
+    print(f'O valor da chave {k} é {v}')
+
+print('-' * 100)
+
+dados = {
+    'João': 11111111,
+    'Pedro': 22222222,
+    'Davi': 333333333
+}
+
+for nomes in dados:
+    cpf = dados[nomes]
+    print(f'O cpf do {nomes} é {cpf}')
