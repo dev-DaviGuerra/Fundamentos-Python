@@ -1,27 +1,26 @@
-sequencia = [1, 2, 3, 4, 5]
-soma = 0
-for numero in sequencia:
-    soma += numero
-    media = soma / len(sequencia)
-print(f'A soma da sequência {sequencia} é: {soma}')
-print(f'A média da sequência é: {media}')
+valores1 = [2, 4, 6, 8]
+valores2 = [1, 2, 3, 4]
 
-print('\n\n\n')
+for valor1 in valores1:
+    for valor2 in valores2:
+        if valor1 == valor2:
+            print(f'O seguinte valor aparece nas duas listas:{valor1}')
 
+print('-' * 50)
 
-numeros = [1, 2, 3, 4, 5, 6, -10]
-maximo = sequencia[0]
-for numero in numeros:
-    if numero > maximo:
-        maximo = numero
+elemento_em_comum = False
 
-print(f'O maior número da sequência é: {maximo}')
+for valor1 in valores1:
+    if elemento_em_comum == True:
+        break
+    for valor2 in valores2:
+        if valor1 == valor2: 
+            elemento_em_comum = True
+            break
 
-print('\n\n\n')
-
-
-palavras = ['time', 'futebol', 'camisa', 'numero', 'juiz', 'gol']
-
-for palavra in palavras:
-    if len(palavra) >= 5:
-        print(f'Palavra com 5 ou mais caracteres da lista: {palavra}')
+if elemento_em_comum == True:
+    print(f'Tem elemento em comum entre as listas {valores1} e {valores2}')
+else:
+    print(f'Não tem nenhum elemento em comum entre as listas {valores1} e {valores2}')
+            
+        
