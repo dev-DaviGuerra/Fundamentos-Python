@@ -5,40 +5,15 @@ capitais = {
     'Espanha': 'Madrid'
 }
 
-print(capitais['Japão'])
+print('Brasil' in capitais)
+print('Brasília' in capitais)
 
-capitais['Inglaterra'] = 'Londres'
-print(capitais)
+print('-' * 100)
 
-del capitais['Inglaterra']
-print(capitais)
+pais = 'Argentina'
 
-capitais['Alemanha'] = 'Berlim'
-
-for pais in capitais:
+if pais in capitais:
     capital = capitais[pais]
-    print(f'A capital de {pais} é {capital}')
-
-print('-' * 100)
-
-d = dict()
-
-d[10] = 'abc'
-d['CHAVE'] = 5
-d[3.15] = True
-
-for k in d:
-    v = d[k]
-    print(f'O valor da chave {k} é {v}')
-
-print('-' * 100)
-
-dados = {
-    'João': 11111111,
-    'Pedro': 22222222,
-    'Davi': 333333333
-}
-
-for nomes in dados:
-    cpf = dados[nomes]
-    print(f'O cpf do {nomes} é {cpf}')
+    print(f'A capital para o país {pais} é {capital}')
+else:
+    print(f'Não há capital registrada para o país {pais}')
