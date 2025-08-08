@@ -1,37 +1,50 @@
-produtos = {
-    'banana': 3.60,
-    'leite': 4.90,
-    'carne': 15.50,
-    'pão': 9.00
-}
-print(produtos)
-print(produtos.get('banana', 'Não foi encontrado!'))
+x = 4.5
+print(x.as_integer_ratio())
 
-print(produtos.setdefault('banana', '100'))
-print(produtos.setdefault('arroz', '100'))
+y = 38.125
+print(y.as_integer_ratio())
+print(y.is_integer())
 
-print(produtos)
+z = 4.0
+print(y.is_integer())
 
-for produto in produtos.keys():
-    print(produto)
+palavra = 'Olá Mundo!'
+print(palavra.upper())
+print(palavra.lower())
 
-for valor in produtos.values():
-    print(valor)
+arquivo = '2023_01_01_NotaFiscal.docx'
+print(arquivo.endswith('.pdf'))
+print(arquivo.startswith('2023'))
 
-for k, v in produtos.items():
-    print(f'{k} -> {v}')
+if arquivo.endswith('pdf') and arquivo.startswith('2023'):
+    print(f'PDF de 2023 encontrado: {arquivo}')
+else:
+    print(f'Este "{arquivo}" NÃO corresponde ao arquivo que estamos procurando')
 
-novos_produtos = {
-    'massa': 5.70,
-    'banana': 4.40,
-}
+texto = 'Hoje em dia todo dia é um novo dia. Mais um dia chega. Dia'
+print(texto.lower().count('dia'))
 
-produtos.update(novos_produtos)
-print(produtos)
+seq = 'aaaaaaabaaaaaaaabaaaaaaaab'
+print(seq.find('b'))
+print(seq.index('b'))
 
-produtos_copia = produtos.copy()
+print(seq[seq.find('b'):])
 
-produtos_copia['morango'] = 3.30
+s1 = '435346256234'
+print(s1.isdigit())
 
-print(produtos)
-print(produtos_copia)
+s2 = 'EIRGNWINfnaefanvuineaiNFUwNUNUununnlapre'
+print(s2.isalpha())
+
+s3 = 'Olá 2025 python'
+print(s1.isdigit())
+print(s2.isalpha())
+
+frase = 'Estou estudando Python!'
+print(frase.replace('!' , '?'))
+
+linha = 'Item1;Item2;Item3'
+print(linha.split(';'))
+
+nomes = ['Joana', 'Marcelo', 'Paulo']
+print('---'.join(nomes))
