@@ -1,32 +1,37 @@
-s = 'Olá mundo!'
-
-num = 10
-
-dec = 3.33
-
-lista = [1, 2, 3]
-
-tupla = ('A', 'B', 'C')
-
-dic = {
-    'chave1': 'valor1',
-    'chave2': 'valor2',
-    'chave3': 'valor3'
-}
-
 produtos = {
     'banana': 3.60,
     'leite': 4.90,
     'carne': 15.50,
     'pão': 9.00
 }
+print(produtos)
+print(produtos.get('banana', 'Não foi encontrado!'))
+
+print(produtos.setdefault('banana', '100'))
+print(produtos.setdefault('arroz', '100'))
 
 print(produtos)
 
-produtos.clear()
+for produto in produtos.keys():
+    print(produto)
 
+for valor in produtos.values():
+    print(valor)
+
+for k, v in produtos.items():
+    print(f'{k} -> {v}')
+
+novos_produtos = {
+    'massa': 5.70,
+    'banana': 4.40,
+}
+
+produtos.update(novos_produtos)
 print(produtos)
 
-print('-' *  100)
+produtos_copia = produtos.copy()
 
-print(dir(produtos))
+produtos_copia['morango'] = 3.30
+
+print(produtos)
+print(produtos_copia)
