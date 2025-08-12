@@ -1,50 +1,49 @@
-x = 4.5
-print(x.as_integer_ratio())
+tup = (0, 0, 0, 1, 0, 1, 0)
+tup.index(1)
 
-y = 38.125
-print(y.as_integer_ratio())
-print(y.is_integer())
+tup.count(0)
 
-z = 4.0
-print(y.is_integer())
+l1 = [0, 0, 0, 0, 1, 0, 1]
 
-palavra = 'Olá Mundo!'
-print(palavra.upper())
-print(palavra.lower())
+l2 = l1.copy
 
-arquivo = '2023_01_01_NotaFiscal.docx'
-print(arquivo.endswith('.pdf'))
-print(arquivo.startswith('2023'))
+print(f'L1: {l1}')
+print(f'l2: {l2}')
 
-if arquivo.endswith('pdf') and arquivo.startswith('2023'):
-    print(f'PDF de 2023 encontrado: {arquivo}')
-else:
-    print(f'Este "{arquivo}" NÃO corresponde ao arquivo que estamos procurando')
+for n in range(5):
+    l1.append(n * 2)
+print(l1)
 
-texto = 'Hoje em dia todo dia é um novo dia. Mais um dia chega. Dia'
-print(texto.lower().count('dia'))
+l1.append('hello')
+print(l1)
 
-seq = 'aaaaaaabaaaaaaaabaaaaaaaab'
-print(seq.find('b'))
-print(seq.index('b'))
+valores = [10, 20, 30, -90, -1, 0, 1]
+valores_positivos = []
 
-print(seq[seq.find('b'):])
+for valor in valores:
+    if valor >= 0:
+        valores_positivos.append(valor)
+print(valores_positivos)
 
-s1 = '435346256234'
-print(s1.isdigit())
+numeros = [1, 2, 3]
+numeros.extend([4, 5, 6])
+print(numeros)
 
-s2 = 'EIRGNWINfnaefanvuineaiNFUwNUNUununnlapre'
-print(s2.isalpha())
+numeros2 = [1, 2, 3]
+novos_numeros = numeros + [4, 5, 6]
+print(novos_numeros)
 
-s3 = 'Olá 2025 python'
-print(s1.isdigit())
-print(s2.isalpha())
+vogais = ['a', 'i', 'o', 'u']
+vogais.insert(1, 'e')
+print(vogais)
 
-frase = 'Estou estudando Python!'
-print(frase.replace('!' , '?'))
+valores_ = [150, 20, 30, 40, 50]
 
-linha = 'Item1;Item2;Item3'
-print(linha.split(';'))
+valor_removido = valores_.pop()
+print(valor_removido)
 
-nomes = ['Joana', 'Marcelo', 'Paulo']
-print('---'.join(nomes))
+valores_.reverse
+print(valores_)
+
+valores_.sort()
+print(valores_)
