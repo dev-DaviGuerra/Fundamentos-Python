@@ -1,49 +1,16 @@
-tup = (0, 0, 0, 1, 0, 1, 0)
-tup.index(1)
+texto = """
 
-tup.count(0)
+Python é uma linguagem de programação de alto nível,[10] interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991
 
-l1 = [0, 0, 0, 0, 1, 0, 1]
+A linguagem foi projetada com a filosofia de enfatizar a importância do esforço do programador sobre o esforço computacional
 
-l2 = l1.copy
+Python é uma linguagem de propósito geral de alto nível, multiparadigma, suporta o paradigma orientado a objetos, imperativo, funcional e procedural.
 
-print(f'L1: {l1}')
-print(f'l2: {l2}')
+O nome Python teve a sua origem no grupo humorístico britânico Monty Python,[13] criador do programa Monty Python's Flying Circus, embora muitas pessoas façam associação com o réptil do mesmo nome (em português, píton ou pitão)
 
-for n in range(5):
-    l1.append(n * 2)
-print(l1)
+"""
+vogais = ['a', 'e', 'i', 'o', 'u']
 
-l1.append('hello')
-print(l1)
-
-valores = [10, 20, 30, -90, -1, 0, 1]
-valores_positivos = []
-
-for valor in valores:
-    if valor >= 0:
-        valores_positivos.append(valor)
-print(valores_positivos)
-
-numeros = [1, 2, 3]
-numeros.extend([4, 5, 6])
-print(numeros)
-
-numeros2 = [1, 2, 3]
-novos_numeros = numeros + [4, 5, 6]
-print(novos_numeros)
-
-vogais = ['a', 'i', 'o', 'u']
-vogais.insert(1, 'e')
-print(vogais)
-
-valores_ = [150, 20, 30, 40, 50]
-
-valor_removido = valores_.pop()
-print(valor_removido)
-
-valores_.reverse
-print(valores_)
-
-valores_.sort()
-print(valores_)
+for vogal in vogais:
+    contador_de_vogal = texto.lower().count(vogal)
+    print(f'Há {contador_de_vogal} vezes a vogal "{vogal}"')
