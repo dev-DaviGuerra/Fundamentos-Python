@@ -1,7 +1,16 @@
-def somar_dois(n):
-    return n + 2
+def adicionar_final(texto, final="!!!"):
+    return texto + final
 
-resultado = somar_dois(10)
-print(resultado)
-print(somar_dois(12))
+print(adicionar_final('Olá ', 'Mundo'))
 
+
+def dividir(n1, n2):
+    if n2 == 0:
+        return 'Impossível dividir'
+    return n1/n2
+    
+print(dividir(n1=10, n2=5))
+
+
+def dizer_ola():
+    print('Olá!')
