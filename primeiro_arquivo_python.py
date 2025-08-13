@@ -1,16 +1,7 @@
-valores = list(range(10))
+def somar_dois(n):
+    return n + 2
 
-maiores_que_cinco = []
-
-for valor in valores:
-    if valor > 5:
-        maiores_que_cinco.append(valor)
-
-resultado = [
-    valor + 10
-    for valor in valores 
-    if valor > 5
-]
-
+resultado = somar_dois(10)
 print(resultado)
-print(valores)
+print(somar_dois(12))
+
