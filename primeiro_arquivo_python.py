@@ -1,5 +1,7 @@
-def dizer_ola():
-    print('Olá!')
+from meu_modulo import minha_funcao, x
 
-retorno = dizer_ola()
+retorno = minha_funcao()
+
 print(retorno)
+
+print(x)
