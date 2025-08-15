@@ -1,34 +1,28 @@
-import math
-import datetime
-import random
-import os
-import time
+letras_minusculas = 'abcdefghijklmnopqrstuvwxyz'
+letras_maiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+cifra = ''
+texto = 'Ola Mundo'
+chave = 2
 
-print(math.pi)
-print(math.log(16, 2))
-#-------------------------------------------------------------------------------
-agora = datetime.datetime.now()
-anos2000 = datetime.datetime(2000, 1, 1)
-print(f'Desde os anos 2000 se passaram: {agora - anos2000}')
-#-------------------------------------------------------------------------------
-for _ in range(5):
-    n = random.randint(1, 5000)
-    print(f'Número escolhido: {n}')
-nomes = ['Juliano', 'Marcos', 'Paulo']
-for _ in range(5):
-    nome = random.choice(nomes)
-    print(f'Nome escolhido: {nome}')
-#-------------------------------------------------------------------------------
-print(os.getcwd())
-print(os.listdir())
-#-------------------------------------------------------------------------------
-inicio = time.time()
-print('Primeira linha')
+def cifrar_caractere(caractere, seq, chave):
+    indice_atual = seq.index(caractere)
+    novo_indice = indice_atual + chave
+    #Lidar com situação onde indice esta a direita da seq
+    while novo_indice >= len(seq):
+        novo_indice = novo_indice - len(seq)
+    #Lidar com situação onde indice esta a esquerda da seq
+    while novo_indice < 0:
+        novo_indice = novo_indice + len(seq)
+    return seq[novo_indice]
 
-time.sleep(3)
 
-print('Segunda linha')
-final = time.time()
-tempoDeExecucao = final - inicio
-print(f'O programa demorou: {tempoDeExecucao:.3f} segundos para ser executado')
-print(dir(time))
+for caractere in texto:
+    if caractere in letras_minusculas:
+        caractere_cifra = cifrar_caractere(caractere, letras_minusculas, chave)
+    elif caractere in letras_maiusculas:
+        caractere_cifra = cifrar_caractere(caractere, letras_maiusculas, chave)
+    else:
+        caractere_cifra = caractere  
+    cifra += caractere_cifra
+
+print(cifra)
